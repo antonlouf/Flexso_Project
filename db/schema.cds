@@ -20,8 +20,7 @@ type Period : String enum {
    Daily; Weekly; Monthly; 
 }
 
-
-entity Customer { 
+entity Customer { // bedrijf in dit geval 
 key ID : UUID;
 name : String;
 based : String; //location
