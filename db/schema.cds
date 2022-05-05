@@ -9,7 +9,6 @@ amount : Decimal; //max 10.000$
 customer : Association to Customer; //met betrekking tot welke klant, kan eventueel leeg zijn 
 expenseType : Type;
 period : Period;
-
 }
 
 type Type : String enum{

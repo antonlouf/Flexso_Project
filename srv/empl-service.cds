@@ -3,7 +3,9 @@ service EmployeService @(path:'/browse') {
 
   @readonly entity Expense as SELECT from my.Expense {*,
     Expense.customer as customer
-  } excluding { createdBy, modifiedBy };
+  };
+
+@readonly entity Customer as SELECT from my.Customer 
 
  // @requires: 'authenticated-user'
   //action submitOrder (book: Books:ID, quantity: Integer);
