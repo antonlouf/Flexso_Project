@@ -1,4 +1,3 @@
-
 namespace sap.capire.ExpenseApp;
 
 entity Expenses {
@@ -23,4 +22,5 @@ entity Customers { // bedrijf in dit geval
 key ID : UUID;
 name : String;
 based : String; //location
+IBAN: String
 }
