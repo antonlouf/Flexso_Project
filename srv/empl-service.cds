@@ -1,15 +1,10 @@
 using { sap.capire.ExpenseApp as my } from '../db/schema';
-service EmployeService @(path:'/browse') {
-
-  @readonly entity Expense as SELECT from my.Expenses {*,
-    Expenses.customer as customer
-  };
 
 
- // @requires: 'authenticated-user'
-  //action submitOrder (book: Books:ID, quantity: Integer);
+service EmployeeService @(path:'/user') {
+ //entity Employee as projection on my.employee;
+ entity Expense as projection on my.Expenses;
 }
 
-service testservice {
-  entity Customer as projection on my.Customers;
-}
+
+using from '../app/user/fiori-services';
