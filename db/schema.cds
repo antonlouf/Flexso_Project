@@ -1,26 +1,35 @@
 namespace sap.capire.ExpenseApp;
 
 entity Expenses {
-key ID : UUID;
+key ID : Integer;
 date : DateTime;
 description : String;
 amount : Decimal; //max 10.000$ 
-customer : Association to Customers; //met betrekking tot welke klant, kan eventueel leeg zijn 
-expenseType : Types;
-period : Periods;
+company : Association to Companys; //mag leeg zijn 
+expenseType : TypeExpenses;
+period : Periods; //mag leeg zijn
 }
 
-type Types : String enum{
-Meal; Commute; //toevoegen..
+type TypeExpenses : String enum{
+meal; commute; //toevoegen..
 }
 
 type Periods : String enum {
-   Daily; Weekly; Monthly; 
+   daily; weekly; monthly; 
 }
 
-entity Customers { // bedrijf in dit geval 
-key ID : UUID;
+// entity employee {
+    
+// }
+
+entity Companys { // bedrijf in dit geval 
+key ID : Integer;
 name : String;
 based : String; //location
+<<<<<<< HEAD
 IBAN: String
+=======
+expenses: Association to many Expenses;
+
+>>>>>>> b307296392e59876baa383e446a2499ec322b565
 }
