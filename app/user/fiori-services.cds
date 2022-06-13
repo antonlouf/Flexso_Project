@@ -16,4 +16,21 @@ annotate EmployeeService.Expense with @(
   }
 );
 
+/*annotate AdminService.Expense with @(
+    UI: {
+
+
+
+
+    }
+);*/
  
+ annotate AdminService.Company with @(
+    UI: {
+            Identification : [{Value : name}],
+            SelectionFields : [ID],
+    LineItem
+
+
+    }
+);
