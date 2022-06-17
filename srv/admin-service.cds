@@ -9,4 +9,4 @@ service AdminService @(requires:'authenticated-user') {
 
 }
 
-using from '../app/user/fiori-services';
+using from '../app/admin/fiori-services';

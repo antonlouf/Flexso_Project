@@ -25,7 +25,7 @@ type Periods : String enum {
 entity Companys { // bedrijf in dit geval 
     key ID : Integer;
     name : String;
-    based : String; //location
+    location : String;
     IBAN: String;
     expense: Association to many Expenses on expense.company = $self;
 

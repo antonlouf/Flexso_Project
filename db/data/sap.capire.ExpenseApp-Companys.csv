@@ -1,4 +1,4 @@
-ID;name;based
-1;Flexso;Gent
-2;i8c;Kontich
-3;RealDolmen;Huizingen
+ID;name;location;IBAN
+1;Flexso;Gent;BE64 1234 5487
+2;i8c;Kontich;BE54 6578 9876
+3;RealDolmen;Huizingen;BE34 1234 7456
