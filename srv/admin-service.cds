@@ -8,3 +8,5 @@ service AdminService @(requires:'authenticated-user') {
     action denyExpense(expense: Expense: ID, company: Company: name);
 
 }
+
+using from '../app/user/fiori-services';
