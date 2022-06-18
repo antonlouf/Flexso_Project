@@ -11,13 +11,30 @@ annotate AdminService.Expense with @(
         LineItem: [
             {Value: ID, Label : 'IDnumber'},
             {Value: date, Label : 'Date and Time'},
-            {Value: expenseType, Label : 'Type'},
             {Value: description, Label : 'Description'},
+            {Value: expenseType, Label : 'Type'},
             {Value: amount, Label : 'Amount'},
-            {Value: company, Label :  'Company'},
+            {Value: type, Label :  'Type'},
             {Value: period, Label : 'Period'}     
-        ] 
-    }
+        ],
+        HeaderFacets: [
+            {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Information', Label: 'Information: ',},
+            {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Creation', Label: 'Created by: ',}
+        ], 
+        Facets: [
+            {
+                $Type: 'UI.CollectionFacet',
+                Label: 'Something nice', //Just testing
+            }, 
+
+        ],
+        FieldGroup#Information: {
+            Data: [
+                {$Type: 'UI.DataField', Value: type},
+                {$Type: 'UI.DataField', Value: date}
+            ]
+        }
+    }      
 );
  
 annotate AdminService.Company with @(
