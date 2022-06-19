@@ -9,10 +9,11 @@ entity Expenses {
     expenseType : TypeExpenses;
     period : Periods; //mag leeg zijn
     madeBy: Association to Employee;
+    status: ExpenseStatus;
 }
 
 type TypeExpenses : String enum{
-meal; commute; //toevoegen..
+    meal; commute; //toevoegen..
 }
 
 type Periods : String enum {
@@ -21,6 +22,10 @@ type Periods : String enum {
 
 type Person : { 
     firstname: String; lastname: String; 
+}
+
+type ExpenseStatus: String enum {
+    Approved; Denied;
 }
 
 entity Employee : Person {

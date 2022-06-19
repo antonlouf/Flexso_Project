@@ -18,20 +18,35 @@ annotate AdminService.Expense with @(
             {Value: period, Label : 'Period'}     
         ],
         HeaderFacets: [
-            {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Information', Label: 'Information: ',},
-            {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Creation', Label: 'Created by: ',}
+            {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Information', Label: 'Information: '},
+            {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Creation', Label: 'Created by: '},
+            {$Type: 'UI.DataFieldForAction', Label: 'Approve', Action: 'admin-service.denyExpense'},
+            {$Type: 'UI.DataFieldForAction', Label: 'Deny', Action: 'admin-service.acceptExpense'}
         ], 
         Facets: [
             {
                 $Type: 'UI.CollectionFacet',
-                Label: 'Something nice', //Just testing
+                Label: 'Expense Information',
+                Facets: [
+                    {$Type: 'UI.ReferenceFacet', Target: '@UI.FieldGroup#Description', Label: 'Desscription: '}
+                ]
             }, 
-
         ],
         FieldGroup#Information: {
             Data: [
                 {$Type: 'UI.DataField', Value: type},
                 {$Type: 'UI.DataField', Value: date}
+            ]
+        },
+        FieldGroup#Creation: {
+            Data: [
+                {$Type: 'UI.DataField', Value: name},
+                {$Type: 'UI.DataField', Value: amount},                
+            ]
+        },
+        FieldGroup#Description: {
+            Data: [
+                {$Type: 'UI.DataField', Value: description}         
             ]
         }
     }      
