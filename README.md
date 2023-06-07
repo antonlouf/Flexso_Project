@@ -1,6 +1,7 @@
 # Web Application build in CAPire SAP 
 The web application was build on the CAPire framework of SAP. 
 This was an assingment given to us by Flexso which is an enterprise specialized in providing business solutions with sap.
+The application was build in cooperation with Elias De Meyere. 
 
 
 ## First Steps
